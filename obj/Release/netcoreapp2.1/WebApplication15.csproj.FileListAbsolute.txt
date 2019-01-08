@@ -1,0 +1,14 @@
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\bin\Release\netcoreapp2.1\WebApplication15.deps.json
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\bin\Release\netcoreapp2.1\WebApplication15.runtimeconfig.json
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\bin\Release\netcoreapp2.1\WebApplication15.runtimeconfig.dev.json
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\bin\Release\netcoreapp2.1\WebApplication15.dll
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\bin\Release\netcoreapp2.1\WebApplication15.pdb
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Release\netcoreapp2.1\WebApplication15.csprojAssemblyReference.cache
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Release\netcoreapp2.1\WebApplication15.csproj.CoreCompileInputs.cache
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Release\netcoreapp2.1\WebApplication15.RazorAssemblyInfo.cache
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Release\netcoreapp2.1\WebApplication15.RazorAssemblyInfo.cs
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Release\netcoreapp2.1\WebApplication15.AssemblyInfoInputs.cache
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Release\netcoreapp2.1\WebApplication15.AssemblyInfo.cs
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Release\netcoreapp2.1\WebApplication15.RazorTargetAssemblyInfo.cache
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Release\netcoreapp2.1\WebApplication15.dll
+C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Release\netcoreapp2.1\WebApplication15.pdb
