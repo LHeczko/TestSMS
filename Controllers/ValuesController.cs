@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,52 +18,62 @@ namespace WebApplication15.Controllers
         }
 
         [HttpGet("SendSMS")]
-        public OkObjectResult SendSMS()
+        public async System.Threading.Tasks.Task<OkObjectResult> SendSMS()
         {
-            System.Net.WebRequest vZadanie;
-            Byte[] vTablicaZnakow;
-
-            String wynik="";
+            string aKomunikat = "";
+            bool WyslijSMSTestResult = false;
 
             try
             {
                 System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12 | System.Net.SecurityProtocolType.Tls11;
 
-                vZadanie = System.Net.WebRequest.Create("https://api.smslabs.net.pl/apiSms/sendSms");
-                vZadanie.Headers.Add("Authorization", "Basic NjYxNGY4ZTYwNDU0YTdmMmNjMjliODNjNmE3NWVkOTYzOWQxYWZhZTpmOTBkMmZjMzgxZGJmMmI2NTYzZWNlOTAzZDA2MjExYmI3NDc5YzA2");
-                vZadanie.Timeout = 1200000;
-                vZadanie.Method = "PUT";
-                vZadanie.ContentType = "application/x-www-form-urlencoded";
+                var req = new HttpRequestMessage(HttpMethod.Put, "https://api.smslabs.net.pl/apiSms/sendSms");
+                req.Headers.Add("Authorization", "Basic NjYxNGY4ZTYwNDU0YTdmMmNjMjliODNjNmE3NWVkOTYzOWQxYWZhZTpmOTBkMmZjMzgxZGJmMmI2NTYzZWNlOTAzZDA2MjExYmI3NDc5YzA2");
+                //req.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+                req.Content = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes("flash=0&expiration=0&phone_number=%2B48601172078&sender_id=SMS%20TEST&message=Test"));
 
-                vTablicaZnakow = System.Text.Encoding.UTF8.GetBytes("flash=0&expiration=0&phone_number=%2B48601172078&sender_id=SMS%20TEST&message=Test");
+                var fac = (IHttpClientFactory)HttpContext.RequestServices.GetService(typeof(IHttpClientFactory));
+                var client = fac.CreateClient();
+                client.Timeout = new TimeSpan(0, 20, 0);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
 
-                vZadanie.ContentLength = vTablicaZnakow.Length;
-
-                System.IO.Stream vStrumien2 = vZadanie.GetRequestStream();
-                vStrumien2.Write(vTablicaZnakow, 0, vTablicaZnakow.Length);
-                vStrumien2.Close();
-
-                using (var vOdpowiedz = vZadanie.GetResponse())
+                var resp = await client.SendAsync(req);
+                if (resp.IsSuccessStatusCode)
                 {
-                    using (var vStrumien = vOdpowiedz.GetResponseStream())
-                    {
-                        using (var ms = new System.IO.MemoryStream())
-                        {
-                            vStrumien.CopyTo(ms);
-                            ms.Position = 0;
-
-                            using (var vCzytnik = new System.IO.StreamReader(ms))
-                                wynik = vCzytnik.ReadToEnd();
-                        }
-                    }
+                    aKomunikat = await resp.Content.ReadAsStringAsync();
+                    WyslijSMSTestResult = true;
                 }
-            }
+                else
+                {
+                    WyslijSMSTestResult = false;
+                }
 
+
+                /*
+
+
+                                using (var vOdpowiedz = vZadanie.GetResponse())
+                                {
+                                    using (var vStrumien = vOdpowiedz.GetResponseStream())
+                                    {
+                                        using (var ms = new System.IO.MemoryStream())
+                                        {
+                                            vStrumien.CopyTo(ms);
+                                            ms.Position = 0;
+
+                                            using (var vCzytnik = new System.IO.StreamReader(ms))
+                                                wynik = vCzytnik.ReadToEnd();
+                                        }
+                                    }
+                                }
+                 */
+            }
             catch (Exception e)
             {
-                wynik = e.Message;
+                aKomunikat = e.Message + " " + e.InnerException;
+                WyslijSMSTestResult = false;
             }
-            return Ok(wynik);
+            return Ok(new { WyslijSMSTestResult, aKomunikat });
         }
     }
 }

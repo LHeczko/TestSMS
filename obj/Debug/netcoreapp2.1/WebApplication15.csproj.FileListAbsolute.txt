@@ -12,3 +12,17 @@ C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\bin\Debu
 C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Debug\netcoreapp2.1\WebApplication15.RazorTargetAssemblyInfo.cache
 C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Debug\netcoreapp2.1\WebApplication15.dll
 C:\Users\LHeczko\Documents\Visual Studio 2017\Projects\WebApplication15\obj\Debug\netcoreapp2.1\WebApplication15.pdb
+C:\TestSMS\bin\Debug\netcoreapp2.1\WebApplication15.deps.json
+C:\TestSMS\bin\Debug\netcoreapp2.1\WebApplication15.runtimeconfig.json
+C:\TestSMS\bin\Debug\netcoreapp2.1\WebApplication15.runtimeconfig.dev.json
+C:\TestSMS\bin\Debug\netcoreapp2.1\WebApplication15.dll
+C:\TestSMS\bin\Debug\netcoreapp2.1\WebApplication15.pdb
+C:\TestSMS\obj\Debug\netcoreapp2.1\WebApplication15.csprojAssemblyReference.cache
+C:\TestSMS\obj\Debug\netcoreapp2.1\WebApplication15.csproj.CoreCompileInputs.cache
+C:\TestSMS\obj\Debug\netcoreapp2.1\WebApplication15.RazorAssemblyInfo.cache
+C:\TestSMS\obj\Debug\netcoreapp2.1\WebApplication15.RazorAssemblyInfo.cs
+C:\TestSMS\obj\Debug\netcoreapp2.1\WebApplication15.AssemblyInfoInputs.cache
+C:\TestSMS\obj\Debug\netcoreapp2.1\WebApplication15.AssemblyInfo.cs
+C:\TestSMS\obj\Debug\netcoreapp2.1\WebApplication15.RazorTargetAssemblyInfo.cache
+C:\TestSMS\obj\Debug\netcoreapp2.1\WebApplication15.dll
+C:\TestSMS\obj\Debug\netcoreapp2.1\WebApplication15.pdb

@@ -11798,11 +11798,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LHeczko\\Documents\\Visual Studio 2017\\Projects\\WebApplication15\\WebApplication15.csproj",
+      "projectUniqueName": "C:\\TestSMS\\WebApplication15.csproj",
       "projectName": "WebApplication15",
-      "projectPath": "C:\\Users\\LHeczko\\Documents\\Visual Studio 2017\\Projects\\WebApplication15\\WebApplication15.csproj",
+      "projectPath": "C:\\TestSMS\\WebApplication15.csproj",
       "packagesPath": "C:\\Users\\LHeczko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LHeczko\\Documents\\Visual Studio 2017\\Projects\\WebApplication15\\obj\\",
+      "outputPath": "C:\\TestSMS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
